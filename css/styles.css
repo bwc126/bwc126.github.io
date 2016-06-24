@@ -1,0 +1,301 @@
+
+* {
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: #1395FF;
+
+
+}
+
+.modal-open .row {
+
+  filter: url('#blur');
+  filter: blur(3px);
+
+}
+
+.ambience {
+
+  background:  linear-gradient(#14171A 3%, transparent, #14171A 90%), #14171A url("../images/tokyo-neon6.png") no-repeat top;
+  background-size: 100% 100%;
+
+}
+
+body .img-responsive {
+
+  border: 1px solid #1395FF;
+
+}
+
+.text-glow-blue {
+
+  text-shadow: 1px 1px 6px #1395FF;
+
+}
+
+.text-glow-pink {
+
+  text-shadow: 1px 1px 6px #FF1395;
+
+}
+
+.box-glow-blue {
+
+  box-shadow: 1px 1px 6px #1395FF, 0px 0px 6px #1395FF;
+
+}
+
+.box-glow-orange {
+
+  box-shadow: 1px 1px 3px #FF7D13, 0px 0px 6px #FF7D13;
+
+}
+
+.box-glow-orange-xtra {
+
+  box-shadow: 1px 1px 6px #FF7D13, 0px 0px 9px #FF7D13;
+
+}
+
+
+/*section: header*/
+
+header .row {
+
+  max-height: 25%;
+  margin: 0 0 0 0;
+  padding: 2% 0 0 0;
+
+}
+
+header .col-md-6 {
+
+  background-color: inherit;
+  margin: 0 0 0 0;
+
+}
+
+.name-plate {
+
+  padding: 0 0 0 0;
+
+}
+
+h1 {
+
+  font-size: 333%;
+  font-weight: 300;
+  background-color: inherit;
+
+}
+
+h2 {
+
+  font-weight: 300;
+  font-size: 111%;
+  margin: 0 0 0 0;
+  background-color: inherit;
+
+}
+
+.logo {
+
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  max-height: 128px;
+
+
+}
+
+.logo-box {
+
+  padding: 0 0 0 0;
+
+}
+
+/*section: showcase*/
+button {
+
+  font-size: 120%;
+  font-weight: 600;
+  background-color: inherit;
+  padding: 3% 0.24%;
+  margin: 1%;
+
+}
+
+button:hover {
+
+  box-shadow: 0px 0px 9px #FF7D13, 0px 0px 12px #FF7D13;
+  text-shadow: 0px 0px 12px #1395FF;
+
+}
+
+button.science {
+
+  border: 1px solid #FF7D13;
+
+}
+
+button.engineering {
+
+  border: 1px solid #FF7D13;
+
+
+}
+
+button.programming {
+
+  border: 1px solid #FF7D13;
+
+}
+
+.jumbotron {
+
+  background-color: inherit;
+
+}
+
+.jumbotron img {
+
+
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+
+  overflow-y: hidden;
+
+}
+
+img.transparent {
+
+  opacity: 0;
+
+}
+
+.showcase .jumbotron {
+
+  padding: 0;
+  border: 0 none;
+
+}
+
+.project {
+
+  margin: 3% 0;
+
+}
+
+
+
+.showcase hr {
+
+  border-top: 1px solid #FF7D13;
+
+}
+
+.showcase h3 {
+
+  margin: 3% 0 2.4%;
+  padding: 0;
+
+}
+
+.project h4 {
+
+  color: #FF1395;
+  text-shadow: 3px 3px 9px #FF1395;
+  font-size: 231%;
+  margin: 0 0 3% 0;
+  padding: 1.5% 0 1.5% 0;
+  border: 1px solid #1395FF;
+  background-color: #14171A;
+
+}
+
+.project a {
+
+  font-size: 165%;
+  text-decoration: none;
+  font-weight: 300;
+  color: #FF7D13;
+  text-shadow: 3px 3px 9px #FF7D13;
+
+}
+
+.project img {
+
+  width: 100%;
+
+}
+
+/*section: modal*/
+
+.modal-dialog {
+
+  font-weight: 600;
+
+}
+
+.modal-header, .modal-footer {
+
+  border: none;
+
+}
+
+.modal hr {
+
+  border: 1px solid #FF7D13;
+
+}
+
+.modal-dialog button {
+
+  color: inherit;
+  font-size: 120%;
+  font-weight: 600;
+  background-color: #14171A;
+  padding: 3% 0.24%;
+  margin: 1%;
+  border: 1px solid #1395FF;
+  box-shadow: 0px 0px 3px #1395FF, 0px 0px 6px #1395FF;
+  text-shadow: 1px 1px 6px #1395FF;
+
+}
+
+.modal-dialog button:hover {
+
+  color: inherit;
+  font-size: 120%;
+  font-weight: 600;
+  background-color: #14171A;
+  padding: 3% 0.24%;
+  margin: 1%;
+  border: 1px solid #1395FF;
+  box-shadow: 0px 0px 9px #1395FF, 0px 0px 12px #1395FF;
+  text-shadow: 0px 0px 12px #1395FF;
+
+}
+
+.modal-dialog h4 {
+
+  font-weight: 600;
+
+}
+
+.modal-body {
+
+  background-color: #14171A;
+
+}
+
+p {
+
+  margin: 1% 0 0 0;
+
+}

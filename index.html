@@ -1,1 +1,156 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian W Coe</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body class="ambience">
+    <div class="container">
+
+<!-- Header -->
+
+      <header>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-4 logo-box">
+            <img class="logo img-responsive box-glow-blue" src="https://s3.amazonaws.com/accredible-api-users/images/33122/original/1440302146071?1440341897" alt="Brian Coe logo">
+          </div>
+          <div class="name-plate col-md-6 text-uppercase text-glow-blue">
+            <h1>Brian W Coe</h1>
+            <h2>Front-End Engineer</h2>
+          </div>
+        </div>
+
+      </header>
+        <!-- <div class="row">
+
+            <div class="offset6 name-plate col-md-6 text-right text-uppercase glow">
+              <h1>Brian W Coe</h1>
+              <h2>Front-End Engineer</h2>
+            </div>
+
+        </div> -->
+
+<!-- Showcase -->
+
+      <section class="showcase">
+
+        <div class="row divider">
+          <div class="col-md-12">
+            <hr class="box-glow-orange-xtra">
+          </div>
+        </div>
+        <div class="row jumbotron">
+          <div class="col-md-12">
+            <img class="img-responsive  box-glow-blue old" src="images/S/Hydra2-S.png" srcset="images/M/Hydra2-M.png 800w, images/L/Hydra2-L.png 1200w" sizes="(min-width: 1200px) 1200px, 100vw" alt="This is the spotlight photo" height="33%">
+            <img class="img-responsive new">
+          </div>
+        </div>
+        <div class="row text-center text-uppercase">
+          <div class= "col-md-4 text-uppercase">
+            <button id="programming" class="text-uppercase col-md-offset-2 col-md-8 programming text-glow-blue box-glow-orange">Programming</button>
+          </div>
+          <div class= "col-md-4">
+            <button id="engineering" class="text-uppercase col-md-offset-2 col-md-8 engineering text-glow-blue box-glow-orange">Engineering</button>
+          </div>
+          <div class= "col-md-4">
+            <button id="science" class="text-uppercase col-md-offset-2 col-md-8 science text-glow-blue box-glow-orange">Science</button>
+          </div>
+
+        </div>
+        <div class="row text-left text-glow-blue">
+          <div class="col-md-12">
+            <h3>Featured Work</h3>
+          </div>
+        </div>
+        <div class="row text-uppercase text-center">
+          <div class="col-md-4 project">
+            <img class="img-responsive box-glow-blue" src="images/thumbs/about-me.png" alt="About-me website" data-toggle="modal" data-target="#project0">
+            <h4 class="box-glow-blue">Project Zero</h4>
+            <a class="project-link" href="https://github.com/bwc126/Project-0-About-Me">Github</a>
+          </div>
+          <div class="col-md-4 project">
+            <img class="img-responsive box-glow-blue" src="images/thumbs/bootstrap.png" alt="Portfolio website" data-toggle="modal" data-target="#project1">
+            <h4 class="box-glow-blue">Project One</h4>
+            <a class="project-link" href="https://github.com/bwc126/Project-1-Portfolio">Github</a>
+          </div>
+          <div class="col-md-4 project">
+            <img class="img-responsive box-glow-blue" src="images/thumbs/hydra-delta.png" alt="my 3D printer design" data-toggle="modal" data-target="#project2">
+            <h4 class="box-glow-blue">Hydra-Delta</h4>
+            <a class="project-link" href="https://github.com/bwc126/hydra-delta">Github</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+<!-- Modal -->
+
+      <div class="modal fade" id="project0" tabindex="-1" role="dialog" aria-labelledby="ProjectZero" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content ambience text-glow-blue">
+            <div class="modal-header">
+              <h4 class="modal-title" id="ProjectZero"></h4>
+            <hr class="box-glow-orange-xtra">
+            </div>
+            <div class="modal-body text-center">
+              <img class="img-responsive center-block" src="images/about-me.png" alt="about me website">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+            <hr class="box-glow-orange-xtra">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="ProjectOne" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content ambience">
+            <div class="modal-header">
+              <h4 class="modal-title" id="ProjectOne"></h4>
+            </div>
+            <div class="modal-body text-center">
+              <img class="img-responsive center-block" src="images/bootstrap.png" alt="Portfolio website project">
+              <p></P>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="project2" tabindex="-1" role="dialog" aria-labelledby="Hydra-Delta" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content ambience">
+            <div class="modal-header">
+              <h4 class="modal-title" id="Hydra-Delta"></h4>
+            </div>
+            <div class="modal-body text-center">
+              <img class="img-responsive center-block" src="images/hydra-delta.png" alt="My 3D printer design">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="blur">
+            <feGaussianBlur stdDeviation="3" />
+          </filter>
+        </defs>
+      </svg>
+  </body>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/app.js"></script>
+</html>
