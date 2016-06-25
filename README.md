@@ -42,7 +42,7 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - sans-serif
 
-- 100, 300, 600 font weights, never more than necessary for legibility. 
+- 100, 300, 600 font weights, never more than necessary for legibility.
 
 # ToDo:
 
