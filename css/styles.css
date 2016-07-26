@@ -61,6 +61,15 @@ body .img-responsive {
 
 }
 
+.dark-bg {
+
+  background-color: rgba(20, 23 ,26, 0.66);
+  margin: 3% 0;
+  padding: 0 3%;
+  overflow: visible;
+  width: 100%;
+
+}
 
 /*section: header*/
 
@@ -118,13 +127,15 @@ h2 {
 }
 
 /*section: showcase*/
+
 button {
 
   font-size: 120%;
   font-weight: 600;
-  background-color: inherit;
   padding: 3% 0.24%;
   margin: 1%;
+  background-color: rgba(20, 23 ,26, 0.66);
+  width: 90%;
 
 }
 
@@ -160,34 +171,57 @@ button.programming {
 
 }
 
-.jumbotron img {
-
-
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-
-  overflow-y: hidden;
-
-}
-
-img.transparent {
-
-  opacity: 0;
-
-}
-
 .showcase .jumbotron {
 
   padding: 0;
   border: 0 none;
+  background-image: url("../images/L/arcade-game-L.png");
+  transition: background-image 3s ease-in-out;
+  height: 600px;
+  width: 93%;
+  text-align: center;
+  margin: 3%;
+  opacity: 0.9;
+
+}
+
+.overlay {
+
+  font-size: 120%;
+  font-weight: 600;
+  width: 100%;
+  height: 33%;
+  margin: 27% 0 0 0;
+  padding: 3% 3% 0 3%;
+  background-color: rgba(20, 23 ,26, 0.9);
+  opacity: 0;
+  text-align: justify;
+
+}
+
+.jumbotron:hover .overlay {
+
+  opacity: 1;
+  transition: 1s;
+
+}
+
+.overlay p {
+
+  font-weight: 400;
+  font-size: 18px;
+
+}
+
+.jumbotron .overlay h3 {
+
+  margin: 0;
 
 }
 
 .project {
 
-  margin: 3% 0;
+  margin: 0 0 3% 0;
 
 }
 
@@ -214,7 +248,7 @@ img.transparent {
   margin: 0 0 3% 0;
   padding: 1.5% 0 1.5% 0;
   border: 1px solid #1395FF;
-  background-color: #14171A;
+  background-color: rgba(20, 23 ,26, 0.66);
 
 }
 
@@ -228,9 +262,16 @@ img.transparent {
 
 }
 
-.project img {
+.project div {
 
+  background-image: url("../images/thumbs/hydra-delta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  height: 300px;
   width: 100%;
+  cursor: pointer;
 
 }
 
@@ -290,7 +331,7 @@ img.transparent {
 
 .modal-body {
 
-  background-color: #14171A;
+  background-color: rgba(20, 23 ,26, 0.66);
 
 }
 

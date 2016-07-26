@@ -22,7 +22,19 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 #### Style Guide
 
+##### Contrast and Hues
+
+- Vibrant hues, with either two complementary and a triadic or two triadic and complementary of the left out hue.
+
+- Balance of cold and warm hues, with slight excess of cold.
+
+- Glows around borders and fonts for increased contrast impact
+
 ##### Pictures
+
+- Border glow.
+
+- 90 degree corners.
 
 ###### Sizes
 
@@ -40,13 +52,33 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 ##### Fonts
 
-- sans-serif
+- sans-serif.
 
 - 100, 300, 600 font weights, never more than necessary for legibility.
 
+##### buttons
+
+- Groups of equal width and height.
+
+- Never more than 2/3rds of view width.
+
+- 2/3rds opaque background.
+
+- Edge and font glow.
+
 # ToDo:
 
-- Fix jumping when jumbotron changes. Force all images to be the same size when viewed on a particular viewport.
+- ~~Center jumbotron, smooth image transition. Ensure responsiveness.~~  
+
+- ~~Make jumbotron transparent.~~
+
+- ~~Give some areas a translucent gray background, for visual variety.~~
+
+- Style overlay, ~~smooth transitions.~~
+
+- Optimize image/file loading.
+
+- Make optimal use of images for responsive design.
 
 - Populate content areas. (WIP 6/16/16)
 
