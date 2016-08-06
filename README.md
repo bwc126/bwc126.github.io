@@ -68,13 +68,17 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 # ToDo:
 
-- ~~Center jumbotron, smooth image transition. Ensure responsiveness.~~  
+- ~~Style overlay.~~
 
-- ~~Make jumbotron transparent.~~
+- Auto-rotate jumbotron image; change to first project of subject area when subject area button pressed
 
-- ~~Give some areas a translucent gray background, for visual variety.~~
+- Include some quick "about me" info near my name/picture.
 
-- Style overlay, ~~smooth transitions.~~
+- ~~Visually indicate on mobile in an obvious way the jumbotron content (maybe a label).~~
+
+- On modals, bring "close" button on-click appearance in line. (glow rather than highlight, etc.)
+
+- Polish all transitions and glows for smoothness, continuity, and coherence.
 
 - Optimize image/file loading.
 
@@ -85,3 +89,9 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 - Reposition sections to improve presentation impact.
 
 - Minimize number of CSS rules and classes.
+
+- Use parallax.(?)
+
+- Links to running projects or interactive overviews.
+
+- Change URL to something simple. 

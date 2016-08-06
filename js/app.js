@@ -1,16 +1,11 @@
+"use strict";
 (function($) {
   var pathPrefix = "images/thumbs/";
   // data will initially be whatever the default set of projects is, which should be one of the major categories so that they can be reached again later by clicking one of the buttons.
   var data = prog;
   var jumbotron = data[2].project;
   renderOverlay(data[2]);
-  function renderOverlay(project) {
-    $(".overlay h3").html(project.project);
-    $(".overlay p").html(project.desc);
-  }
   // The click triggers for the subject buttons will set the project images to the project images for the appropriate subject area, and then call setSpotlightTriggers to make sure they will change the spotlight upon mouseenter.
-
-
   $("#programming").click(function() {
     console.log("Programming active");
     data = prog;
@@ -26,6 +21,12 @@
     data = sci;
     renderProjects();
   });
+  // rederOverlay handles rendering of the overlay and the title for the jumbotron
+  function renderOverlay(project) {
+    $(".title-banner").html(project.project);
+    $(".overlay h3").html(project.project);
+    $(".overlay p").html(project.desc);
+  }
   function renderProjects() {
     renderProjectText();
     renderProjectLinks();
@@ -84,25 +85,20 @@
     $(".project div").each(function(index) {
       // Any time a project image is entered, the spotlight img will fadeout, set new src/srcset according to the project that was entered, and then fade back in.
       $(this).mouseenter(function() {
-        // Callbacks to jQ animation functions will execute after the ani completes, so this will cause the jumbotron image to fadeOut, and then execute the code passed into the anon calllback.
+        // We shouldn't change the jumbotron unless we're hovering over a different image than the one that's already loaded.
         if (data[index].project !== jumbotron) {
-
-            // .load() will make sure the jQ object is ready on the DOM before proceeding with the anon CB passed to it, in this case, fadeIn, ensuring our image is ready before we attempt to fade it back in.
+            // Callbacks to jQ animation functions will execute after the ani completes, so this will cause the jumbotron image to fadeOut, and then execute the code passed into the anon calllback.
             $(".jumbotron").fadeTo(600,0,"swing",function() {
-            });
-            setTimeout(function() {
               $(".jumbotron").attr("style", "background-image: url('" + data[index].srcset.split(" ")[2] + "')");
               renderOverlay(data[index]);
-            }
-            ,600);
-            setTimeout(function() {
-              $(".jumbotron").fadeTo(600,0.9,"swing");
-            }
-            ,601);
+              // .load() will make sure the jQ object is ready on the DOM before proceeding with the anon CB passed to it, in this case, fadeTo, ensuring our image is ready before we attempt to fade it back in.
+              $(".jumbotron").load(function(){
+                $(".jumbotron").fadeTo(900,0.9,"swing");
+              });
+              jumbotron = data[index].project;
+            });
 
 
-
-            jumbotron = data[index].project;
             // These two .attr calls set a new src/srcset for the spotlight once the fadeout is complete. Once the images are loaded an ready, the fadeIn call above will execute.
             // $(".jumbotron img").attr("srcset", data[index].srcset);
           };
@@ -110,9 +106,6 @@
       });
     });
   };
-
-
-
   setSpotlightTriggers();
   $("#programming").click();
 })(jQuery);
