@@ -25,20 +25,22 @@
 
 }
 
-body .img-responsive {
+/*body .img-responsive {
 
   border: 1px solid #1395FF;
 
-}
+}*/
 
 .text-glow-blue {
 
+  color: #1395FF;
   text-shadow: 1px 1px 6px #1395FF;
 
 }
 
 .text-glow-pink {
 
+  color: #FF1395;
   text-shadow: 1px 1px 6px #FF1395;
   transition: 1s;
 
@@ -46,6 +48,7 @@ body .img-responsive {
 
 .text-glow-pink:hover {
 
+  color: #FF1395;
   text-shadow: 1px 1px 12px #FF1395;
   transition: 1s;
 
@@ -53,6 +56,7 @@ body .img-responsive {
 
 .text-glow-orange {
 
+  color: #FF7D13;
   text-shadow: 1px 1px 6px #FF7D13;
   transition: 1s;
 
@@ -60,6 +64,7 @@ body .img-responsive {
 
 .text-glow-orange:hover {
 
+  color: #FF7D13;
   text-shadow: 1px 1px 12px #FF7D13;
   transition: 1s;
 
@@ -81,6 +86,7 @@ body .img-responsive {
 
 .box-glow-orange {
 
+  border: 1px solid #FF7D13;
   box-shadow: 1px 1px 3px #FF7D13, 0px 0px 6px #FF7D13;
 
 }
@@ -91,13 +97,25 @@ body .img-responsive {
 
 }
 
+.box-glow-pink {
+
+  box-shadow: 1px 1px 3px #FF1395, 0px 0px 6px #FF1395;
+
+}
+
 .dark-bg {
 
   background-color: rgba(20, 23 ,26, 0.66);
   margin: 3% 0;
   padding: 0 3%;
   overflow: visible;
-  width: 100%;
+
+}
+
+.dark-bg-xtra {
+
+  background-color: rgba(20, 23 ,26, 0.66);
+  padding: 3% 0;
 
 }
 
@@ -107,7 +125,7 @@ header .row {
 
   max-height: 25%;
   margin: 0 0 0 0;
-  padding: 2% 0 0 0;
+  padding: 0 0 0 0;
 
 }
 
@@ -118,9 +136,19 @@ header .col-md-6 {
 
 }
 
+header p {
+
+  color: #FF1395;
+  text-align: justify;
+  margin: 12% 0 0 0;
+
+}
+
 .name-plate {
 
   padding: 0 0 0 0;
+  margin: 0.9% 0 0 0;
+  text-align: right;
 
 }
 
@@ -143,20 +171,30 @@ h2 {
 
 .logo {
 
-  margin: 0 0 0 0;
+  border: 12px solid rgba(20,23,26,0.9);
   padding: 0 0 0 0;
   max-height: 128px;
-
+  top: 18px;
+  position: relative;
+  opacity: 0.9;
 
 }
 
-.logo-box {
+/*.logo-box {
 
   padding: 0 0 0 0;
+  width: 18%;
 
-}
+}*/
 
 /*section: showcase*/
+
+.showcase hr {
+
+  margin: 3% 0 0;
+  border-top: 1px solid #FF7D13;
+
+}
 
 button {
 
@@ -178,36 +216,12 @@ button:hover {
 
 }
 
-button.science {
-
-  border: 1px solid #FF7D13;
-
-}
-
-button.engineering {
-
-  border: 1px solid #FF7D13;
-
-
-}
-
-button.programming {
-
-  border: 1px solid #FF7D13;
-
-}
-
-.jumbotron {
-
-  background-color: inherit;
-
-}
-
 .showcase .jumbotron {
 
   padding: 0;
-  border: 0 none;
-  background-image: url("../images/M/arcade-game-M.png");
+  background-image: url("../images/M/map-M.png");
+  background-color: rgba(20,23,26,0.9);
+  border: 12px solid rgba(20,23,26,1);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -215,8 +229,9 @@ button.programming {
   height: 600px;
   width: 93%;
   text-align: center;
-  margin: 3%;
-  opacity: 0.9;
+  margin: 0 3% 3%;
+  opacity: 1;
+  left: 0.9%
 
 }
 
@@ -260,7 +275,7 @@ button.programming {
   height: 9%;
   font-weight: 400;
   font-size: 231%;
-  background-color: rgba(20, 23 ,26, 0.66);
+  background-color: rgba(20, 23 ,26, 0.81);
   text-align: left;
   padding: 0 3%;
 
@@ -274,15 +289,7 @@ button.programming {
 
 .project {
 
-  margin: 0 0 3% 0;
-
-}
-
-
-
-.showcase hr {
-
-  border-top: 1px solid #FF7D13;
+  margin: 3% 0 3% 0;
 
 }
 
@@ -316,6 +323,7 @@ button.programming {
 
 .project div {
 
+  border: 12px solid rgba(20,23,26,0.9);
   background-image: url("../images/thumbs/hydra-delta.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -358,6 +366,7 @@ button.programming {
   border: 1px solid #1395FF;
   box-shadow: 0px 0px 3px #1395FF, 0px 0px 6px #1395FF;
   text-shadow: 1px 1px 6px #1395FF;
+  transition: 1s;
 
 }
 
@@ -372,6 +381,7 @@ button.programming {
   border: 1px solid #1395FF;
   box-shadow: 0px 0px 9px #1395FF, 0px 0px 12px #1395FF;
   text-shadow: 0px 0px 12px #1395FF;
+  transition: 1s;
 
 }
 

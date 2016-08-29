@@ -3,8 +3,8 @@
   var pathPrefix = "images/thumbs/";
   // data will initially be whatever the default set of projects is, which should be one of the major categories so that they can be reached again later by clicking one of the buttons.
   var data = prog;
-  var jumbotron = data[2].project;
-  renderOverlay(data[2]);
+  var jumbotron = data[1].project;
+  renderOverlay(data[1]);
   // The click triggers for the subject buttons will set the project images to the project images for the appropriate subject area, and then call setSpotlightTriggers to make sure they will change the spotlight upon mouseenter.
   $("#programming").click(function() {
     console.log("Programming active");
@@ -93,7 +93,7 @@
               renderOverlay(data[index]);
               // .load() will make sure the jQ object is ready on the DOM before proceeding with the anon CB passed to it, in this case, fadeTo, ensuring our image is ready before we attempt to fade it back in.
               $(".jumbotron").load(function(){
-                $(".jumbotron").fadeTo(900,0.9,"swing");
+                $(".jumbotron").fadeTo(900,1,"swing");
               });
               jumbotron = data[index].project;
             });

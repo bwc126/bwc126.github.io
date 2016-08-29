@@ -72,15 +72,33 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Auto-rotate jumbotron image; change to first project of subject area when subject area button pressed
 
-- Include some quick "about me" info near my name/picture.
+- ~~Include some quick "about me" info near my name/picture.~~
+
+- Add a modal for more about me near the top blurb, perhaps with links to resumes
 
 - ~~Visually indicate on mobile in an obvious way the jumbotron content (maybe a label).~~
 
-- On modals, bring "close" button on-click appearance in line. (glow rather than highlight, etc.)
+- ~~On modals, bring "close" button on-click appearance in line. (glow rather than highlight, etc.)~~
 
-- Polish all transitions and glows for smoothness, continuity, and coherence.
+- ~~Polish all transitions and glows for smoothness, continuity, and coherence.~~
+
+- Use a more professional and aesthetic personal picture.
 
 - Optimize image/file loading.
+
+- Change highlight colors.
+
+- Add contact me buttons.
+
+- Force project widths to have padding or margin on mobile.
+
+- consider relocating projects into menu on mobile.
+
+- Might spacings in header tighter, reorganize layout on larger screens.
+
+- ~~Add internal border to jumbotron.~~
+
+- Add more border regions, enhance some glows.
 
 - Make optimal use of images for responsive design.
 
@@ -92,6 +110,6 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Use parallax.(?)
 
-- Links to running projects or interactive overviews.
+- Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to)
 
-- Change URL to something simple. 
+- Change URL to something simple.

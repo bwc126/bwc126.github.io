@@ -14,7 +14,7 @@ var prog = {
     link: "https://github.com/bwc126/neighborhood-map",
     src: "images/S/map-S.png",
     srcset: "images/M/map-M.png 800w, images/L/map-L.png 1200w",
-    desc: "Single page implementing Google Maps and Wikipedia API, with interactive points of interest. First use of a MVVM framework: Knockout.",
+    desc: "Single page implementing Google Maps and Wikipedia API, with interactive points of interest. First use of a MVVM framework to produce a single-page application: Knockout.",
     domain: "GITHUB",
     thumb: "map-thumb.png"
   },
