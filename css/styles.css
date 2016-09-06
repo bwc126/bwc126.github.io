@@ -8,6 +8,17 @@
   font-family: "Lato", sans-serif;
   color: #1395FF;
 
+}
+
+::-moz-selection {
+
+  background: black;
+
+}
+
+::selection {
+
+  background: black;
 
 }
 
@@ -141,6 +152,7 @@ header p {
   color: #FF1395;
   text-align: justify;
   margin: 12% 0 0 0;
+  font-size: 90%;
 
 }
 
@@ -154,7 +166,7 @@ header p {
 
 h1 {
 
-  font-size: 333%;
+  font-size: 423%;
   font-weight: 300;
   background-color: inherit;
 
@@ -171,21 +183,47 @@ h2 {
 
 .logo {
 
+  margin: 0 0 0 -21%;
   border: 12px solid rgba(20,23,26,0.9);
-  padding: 0 0 0 0;
+  padding: 0;
   max-height: 128px;
-  top: 18px;
+  top: 12px;
   position: relative;
   opacity: 0.9;
+  left: 3%;
 
 }
 
-/*.logo-box {
+.logo-box {
 
-  padding: 0 0 0 0;
-  width: 18%;
+  padding: 0;
 
-}*/
+}
+
+.menu {
+
+  position: relative;
+  z-index: 1;
+  width: 66%;
+  top: 6%;
+
+}
+
+.menu li {
+
+  font-size: 120%;
+  margin: 3% 0;
+
+}
+
+.btn-narrow {
+
+  padding: 0;
+  margin: 24% 0;
+  position: relative;
+  right: -27%;
+
+}
 
 /*section: showcase*/
 
@@ -309,6 +347,7 @@ button:hover {
   padding: 1.5% 0 1.5% 0;
   border: 1px solid #1395FF;
   background-color: rgba(20, 23 ,26, 0.66);
+  height: 87px;
 
 }
 
@@ -327,7 +366,7 @@ button:hover {
   background-image: url("../images/thumbs/hydra-delta.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: cover;
   opacity: 0.9;
   height: 300px;
   width: 100%;

@@ -74,7 +74,7 @@ var sci = {
     src: "",
     srcset: "",
     desc: "Characterize microparticles produced by a low-cost microfluidic technique for multilayer encapsulation. An Open Source laser-based Brownian motion detector was used to measure disperisty and demonstrate synthesis technique precision and repeatability.",
-    domain: "DOMO",
+    domain: "Github",
     thumb: "something.png"
   },
   2: {
@@ -83,7 +83,7 @@ var sci = {
     src: "",
     srcset: "",
     desc: "Use a low-cost, open-source spectrographic system to characterize products and intermediates from reactions carried out in microfluidic reactionware.",
-    domain: "DOMO",
+    domain: "Github",
     thumb: "something.png"
   }
 };

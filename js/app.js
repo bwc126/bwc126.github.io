@@ -3,6 +3,14 @@
   var pathPrefix = "images/thumbs/";
   // data will initially be whatever the default set of projects is, which should be one of the major categories so that they can be reached again later by clicking one of the buttons.
   var data = prog;
+  var areas = [prog,engi,sci];
+  var model = [];
+  for (var subj = 0; subj<3; subj++) {
+    for (var pro = 0; pro<3; pro++) {
+      model.push(areas[subj][pro]);
+    };
+  };
+  console.dir(model);
   var jumbotron = data[1].project;
   renderOverlay(data[1]);
   // The click triggers for the subject buttons will set the project images to the project images for the appropriate subject area, and then call setSpotlightTriggers to make sure they will change the spotlight upon mouseenter.
@@ -46,6 +54,9 @@
     // Populate links with correct urls.
     $(".project-link").each(function(index) {
       $(this).attr("href", data[index].link);
+    });
+    $(".menu li").each(function(index) {
+      $(this).text(model[index].project);
     });
   };
   function renderProjectLinkDomains() {
@@ -103,6 +114,21 @@
             // $(".jumbotron img").attr("srcset", data[index].srcset);
           };
 
+      });
+    });
+    $(".menu li").each(function(index) {
+      $(this).mouseenter(function() {
+        if (model[index].project !== jumbotron) {
+          $(".jumbotron").fadeTo(600,0,"swing",function() {
+            $(".jumbotron").attr("style", "background-image: url('" + model[index].srcset.split(" ")[2] + "')");
+            renderOverlay(model[index]);
+            // .load() will make sure the jQ object is ready on the DOM before proceeding with the anon CB passed to it, in this case, fadeTo, ensuring our image is ready before we attempt to fade it back in.
+            $(".jumbotron").load(function(){
+              $(".jumbotron").fadeTo(900,1,"swing");
+            });
+            jumbotron = model[index].project;
+          });
+        };
       });
     });
   };
