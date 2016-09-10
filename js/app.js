@@ -117,7 +117,7 @@
       });
     });
     $(".menu li").each(function(index) {
-      $(this).mouseenter(function() {
+      $(this).click(function() {
         if (model[index].project !== jumbotron) {
           $(".jumbotron").fadeTo(600,0,"swing",function() {
             $(".jumbotron").attr("style", "background-image: url('" + model[index].srcset.split(" ")[2] + "')");

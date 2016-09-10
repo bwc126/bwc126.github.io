@@ -199,13 +199,22 @@ h2 {
   padding: 0;
 
 }
+/*.showcase .collapse {
 
+  position: absolute;
+  z-index: 900;
+
+}*/
 .menu {
 
-  position: relative;
-  z-index: 1;
-  width: 66%;
-  top: 6%;
+  background-color: rgba(20, 23 ,26, 0.81);
+  font-size: 210%
+  position: absolute;
+  z-index: 1000;
+  width: 639%;
+  left: -519%;
+  top: 96%;
+  padding: 12%;
 
 }
 

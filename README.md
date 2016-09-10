@@ -74,6 +74,10 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Add a modal for more about me near the top blurb, perhaps with links to resumes
 
+- ~~Avoid resizing page on menu open.~~
+
+- Style Menu, add box glow and opening/closing animation.
+
 - Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to)
 
 - Add contact me buttons.
