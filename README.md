@@ -68,50 +68,28 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 # ToDo:
 
-- Auto-rotate jumbotron image; change to first project of subject area when subject area button pressed.
+- ~~Auto-rotate jumbotron image; change to first project of subject area when subject area button pressed.~~
 
-- Use a more professional and aesthetic personal picture.
-
-- Add a modal for more about me near the top blurb, perhaps with links to resumes
-
-- ~~Avoid resizing page on menu open.~~
-
-- Style Menu, add box glow and opening/closing animation.
+- ~~Add a modal for more about me near the top blurb, perhaps with links to resumes.~~
 
 - Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to)
 
-- Add contact me buttons.
-
-- Force project widths to have padding or margin on mobile.
-
-- Relocate projects into menu on mobile.
+- Add contact me buttons: linkedIn, Gmail, G+, Github, Udacity, etc.
 
 - Populate content areas.
 
-- Optimize image/file loading.
+- Optimize image/file loading, perhaps using a preloader service.
 
 - Make optimal use of images for responsive design.
-
-- Reposition sections to improve presentation impact.
 
 - Minimize number of CSS rules and classes.
 
 - Change URL to something simple.
+
+- Use something besides hr tags to visually differentiate menu items.
 
 - Use parallax.(?)
 
 - Use accordion menu for each project, eliminate modals and jumbotron, replace with a carousel at the top or within each project for multiple images. Alternately, an accordion menu entry with each subject area, and the carousel within each accordion changes for viewing each project within the subject area, changing the text along with the image.
 
 - Refactor 'app' into views, models, controllers.
-
-- ~~Change highlight colors.~~
-
-- ~~Make spacings in header tighter, reorganize layout on larger screens.~~
-
-- ~~Add internal border to jumbotron.~~
-
-- ~~Add more border regions, enhance some glows.~~
-
-- ~~On modals, bring "close" button on-click appearance in line. (glow rather than highlight, etc.)~~
-
-- ~~Polish all transitions and glows for smoothness, continuity, and coherence.~~

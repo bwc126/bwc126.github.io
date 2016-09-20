@@ -83,6 +83,7 @@
 
 .box-glow-blue {
 
+  border: 1px solid #1395FF;
   box-shadow: 1px 1px 6px #1395FF, 0px 0px 6px #1395FF;
   transition: 1s;
 
@@ -104,6 +105,7 @@
 
 .box-glow-orange-xtra {
 
+  border: 1px solid #FF7D13;
   box-shadow: 1px 1px 6px #FF7D13, 0px 0px 9px #FF7D13;
 
 }
@@ -207,11 +209,11 @@ h2 {
 }*/
 .menu {
 
-  background-color: rgba(20, 23 ,26, 0.81);
+  background-color: rgba(20, 23 ,26, 0.9);
   font-size: 210%
   position: absolute;
   z-index: 1000;
-  width: 627%;
+  width: 636%;
   left: -519%;
   top: 96%;
   padding: 12%;
@@ -222,6 +224,12 @@ h2 {
 
   font-size: 120%;
   margin: 3% 0;
+
+}
+
+.menu hr {
+
+  margin: 0;
 
 }
 
@@ -236,10 +244,9 @@ h2 {
 
 /*section: showcase*/
 
-.showcase hr {
+.showcase .divider hr {
 
   margin: 3% 0 0;
-  border-top: 1px solid #FF7D13;
 
 }
 
@@ -344,6 +351,7 @@ button:hover {
 
   margin: 3% 0 2.4%;
   padding: 0;
+  font-size: 200%;
 
 }
 

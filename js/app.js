@@ -1,6 +1,9 @@
 "use strict";
 (function($) {
   var pathPrefix = "images/thumbs/";
+  var rotation;
+  var resumeRotation;
+  var interval = 6000;
   // data will initially be whatever the default set of projects is, which should be one of the major categories so that they can be reached again later by clicking one of the buttons.
   var data = prog;
   var areas = [prog,engi,sci];
@@ -21,16 +24,19 @@
     console.log("Programming active");
     data = prog;
     renderProjects();
+
   });
   $("#engineering").click(function() {
     console.log("Engineering Active");
     data = engi;
     renderProjects();
+
   });
   $("#science").click(function() {
     console.log("Science Active");
     data = sci;
     renderProjects();
+
   });
   // rederOverlay handles rendering of the overlay and the title for the jumbotron
   function renderOverlay(project) {
@@ -70,15 +76,15 @@
   };
   function renderProjectModals() {
     // Render projects in the modal, including: name, image, and descriptive text.
-    $(".modal-dialog p").each(function(index) {
+    $(".project-modal p").each(function(index) {
       $(this).text(data[index].desc);
     });
-    $(".modal-dialog h4").each(function(index) {
+    $(".project-modal h4").each(function(index) {
       $(this).text(data[index].project);
     })
   };
   function renderProjectModalImages() {
-    $(".modal-dialog img").each(function(index) {
+    $(".project-modal img").each(function(index) {
       $(this).attr("src", pathPrefix + data[index].thumb);
       var msg = 'This is the image for ' + data[index].project;
       $(this).attr('alt', msg);
@@ -94,18 +100,22 @@
       $(this).attr('alt', msg);
     });
   };
-  // For loop construction doesn't play nicely with serial event listener setting, so specific code is written for each project so that mouseenter on its image causes the spotlight image to change.
+
   function setSpotlightTriggers() {
     $(".project div").each(function(index) {
       // Any time a project image is entered, the spotlight img will fadeout, set new src/srcset according to the project that was entered, and then fade back in.
       $(this).mouseenter(function() {
         // We shouldn't change the jumbotron unless we're hovering over a different image than the one that's already loaded.
         if (data[index].project !== jumbotron) {
-            updateSpotlight(data[index]);
-          };
+          window.clearInterval(rotation);
+          updateSpotlight(data[index]);
+          window.setTimeout(rotateJumbotron(data[index],model),6000);
+        };
 
       });
     });
+  };
+  function setMenuSpotlightTriggers() {
     $(".menu li").each(function(index) {
       $(this).click(function() {
         if (model[index].project !== jumbotron) {
@@ -119,12 +129,13 @@
           else {
             $("#science").click();
           };
+          window.clearInterval(rotation);
           updateSpotlight(model[index]);
+          window.setTimeout(rotateJumbotron(model[index],model),6000);
           }
       });
     });
   };
-
   // updateSpotlight takes a project model and sets the spotlight jumbotron to change to its image, fading in and out with an animation. The function also updates the tracker variable for which project is currently on the jumbotron.
   function updateSpotlight(projectModel) {
     // Callbacks to jQ animation functions will execute after the ani completes, so this will cause the jumbotron image to fadeOut, and then execute the code passed into the anon calllback.
@@ -138,6 +149,23 @@
       jumbotron = projectModel.project;
     });
   }
+  function rotateJumbotron(mod,collection) {
+    var currentItem = collection.indexOf(mod);
+    var numItems = collection.length;
+
+    rotation = window.setInterval(function() {
+      if (currentItem === numItems-1) {
+        currentItem = 0;
+      }
+      else {
+        currentItem++;
+      }
+      updateSpotlight(collection[currentItem]);
+    }, interval);
+
+  }
   setSpotlightTriggers();
+  setMenuSpotlightTriggers();
+  rotateJumbotron(data[1],model);
   $("#programming").click();
 })(jQuery);
