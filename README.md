@@ -68,13 +68,11 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 # ToDo:
 
-- ~~Auto-rotate jumbotron image; change to first project of subject area when subject area button pressed.~~
-
-- ~~Add a modal for more about me near the top blurb, perhaps with links to resumes.~~
-
 - Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to)
 
 - Add contact me buttons: linkedIn, Gmail, G+, Github, Udacity, etc.
+
+- Add resumes to the 'about me' modal.
 
 - Populate content areas.
 

@@ -136,16 +136,16 @@
 
 header .row {
 
-  max-height: 25%;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
+
+  margin: 0;
+  padding: 0;
 
 }
 
 header .col-md-6 {
 
   background-color: inherit;
-  margin: 0 0 0 0;
+  margin: 0;
 
 }
 
@@ -153,14 +153,14 @@ header p {
 
   color: #FF1395;
   text-align: justify;
-  margin: 12% 0 0 0;
+  margin: 12% 9% 0;
   font-size: 90%;
 
 }
 
 .name-plate {
 
-  padding: 0 0 0 0;
+  padding: 0;
   margin: 0.9% 0 0 0;
   text-align: right;
 
@@ -193,6 +193,7 @@ h2 {
   position: relative;
   opacity: 0.9;
   left: 3%;
+  cursor: pointer;
 
 }
 
@@ -201,12 +202,7 @@ h2 {
   padding: 0;
 
 }
-/*.showcase .collapse {
 
-  position: absolute;
-  z-index: 900;
-
-}*/
 .menu {
 
   background-color: rgba(20, 23 ,26, 0.9);
@@ -291,14 +287,10 @@ button:hover {
 
 .overlay {
 
-  font-size: 120%;
-  font-weight: 600;
-  width: 100%;
-  height: 51%;
-  margin: 18% 0 0 0;
+
+  height: 120%;
+  margin: 0;
   padding: 3% 3% 0 3%;
-  background-color: rgba(20, 23 ,26, 0.9);
-  opacity: 0;
   text-align: justify;
 
 }
@@ -306,14 +298,22 @@ button:hover {
 .jumbotron .overlay {
 
   opacity: 0;
-  transition: 1s opacity ease-in;
+  transition: .66s;
 
 }
 
 .jumbotron:hover .overlay {
 
   opacity: 1;
-  transition: 1s opacity ease-in;
+  transition: 1s ease-in;
+
+}
+
+.jumbotron:hover .title-banner {
+
+  height: 39%;
+  transition: 1s ease-out;
+  background-color: rgba(20, 23 ,26, 0.9);
 
 }
 
@@ -326,14 +326,17 @@ button:hover {
 
 .title-banner {
 
-  height: 9%;
+  height: 12%;
   font-weight: 400;
   font-size: 231%;
   background-color: rgba(20, 23 ,26, 0.81);
   text-align: left;
   padding: 0 3%;
+  transition: 1s ease-in;
 
 }
+
+
 
 .jumbotron .overlay h3 {
 

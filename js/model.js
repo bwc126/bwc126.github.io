@@ -51,11 +51,11 @@ var engi = {
   2: {
     project: "Multimaterial Electrojetting",
     link: "www",
-    src: "",
-    srcset: "",
+    src: "images/S/emitter-S.png",
+    srcset: "images/M/emitter-M.png 800w, images/L/emitter-L.png 1200w",
     desc: "Model and prototype micronozzles capable of precise, high-throughput printing with a wide range of working material viscosities, disperity, and compositions.",
     domain: "GITHUB",
-    thumb: "something.png"
+    thumb: "emitter-thumb.png"
   }
 };
 var sci = {

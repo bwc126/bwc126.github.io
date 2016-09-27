@@ -1,54 +1,59 @@
 "use strict";
 (function($) {
+  var rotation,
+      proj,
+      sub;
   var pathPrefix = "images/thumbs/";
-  var rotation;
-  var resumeRotation;
-  var interval = 6000;
-  // data will initially be whatever the default set of projects is, which should be one of the major categories so that they can be reached again later by clicking one of the buttons.
+  var ROT_INTERVAL = 9000;
+  var FADE_OUT = 900;
+  var FADE_IN = 900;
+
   var data = prog;
   var areas = [prog,engi,sci];
   var model = [];
-  var proj;
-  for (var subj = 0; subj<3; subj++) {
-    for (var pro = 0; pro<3; pro++) {
-      proj = areas[subj][pro];
-      proj.subject = subj;
-      model.push(proj);
+  var jumbotron = data[1].project;
+  function compileModel() {
+    for (var subj = 0; subj<3; subj++) {
+      for (var pro = 0; pro<3; pro++) {
+        proj = areas[subj][pro];
+        proj.subject = subj;
+        model.push(proj);
+      };
     };
   };
-  var sub;
-  var jumbotron = data[1].project;
+  compileModel();
   renderOverlay(data[1]);
   // The click triggers for the subject buttons will set the project images to the project images for the appropriate subject area, and then call setSpotlightTriggers to make sure they will change the spotlight upon mouseenter.
   $("#programming").click(function() {
-    console.log("Programming active");
+    // console.log("Programming active");
     data = prog;
     renderProjects();
 
   });
   $("#engineering").click(function() {
-    console.log("Engineering Active");
+    // console.log("Engineering Active");
     data = engi;
     renderProjects();
 
   });
   $("#science").click(function() {
-    console.log("Science Active");
+    // console.log("Science Active");
     data = sci;
     renderProjects();
 
   });
   // rederOverlay handles rendering of the overlay and the title for the jumbotron
   function renderOverlay(project) {
-    $(".title-banner").html(project.project);
-    $(".overlay h3").html(project.project);
-    $(".overlay p").html(project.desc);
+    $(".title-bar").text(project.project);
+
+    $(".overlay p").text(project.desc);
   }
   function renderProjects() {
     renderProjectText();
     renderProjectLinks();
     renderProjectImages();
     setSpotlightTriggers();
+    setMenuSpotlightTriggers();
     renderProjectLinkDomains();
     renderProjectModals();
     renderProjectModalImages();
@@ -107,9 +112,7 @@
       $(this).mouseenter(function() {
         // We shouldn't change the jumbotron unless we're hovering over a different image than the one that's already loaded.
         if (data[index].project !== jumbotron) {
-          window.clearInterval(rotation);
-          updateSpotlight(data[index]);
-          window.setTimeout(rotateJumbotron(data[index],model),6000);
+          focusSpotlight(data[index]);
         };
 
       });
@@ -129,26 +132,30 @@
           else {
             $("#science").click();
           };
-          window.clearInterval(rotation);
-          updateSpotlight(model[index]);
-          window.setTimeout(rotateJumbotron(model[index],model),6000);
+          focusSpotlight(model[index]);
           }
       });
     });
   };
+  // function @focusSpotlight takes a project model, stops the autorotation of the jumbotron, invokes updateSpotlight to change the jumbotron image, and then resumes the rotation after a full rotation interval has passed.
+  function focusSpotlight(projectModel) {
+    window.clearInterval(rotation);
+    updateSpotlight(projectModel);
+    window.setTimeout(rotateJumbotron(projectModel,model),ROT_INTERVAL);
+  };
   // updateSpotlight takes a project model and sets the spotlight jumbotron to change to its image, fading in and out with an animation. The function also updates the tracker variable for which project is currently on the jumbotron.
   function updateSpotlight(projectModel) {
     // Callbacks to jQ animation functions will execute after the ani completes, so this will cause the jumbotron image to fadeOut, and then execute the code passed into the anon calllback.
-    $(".jumbotron").fadeTo(600,0,"swing",function() {
+    $(".jumbotron").fadeTo(FADE_OUT,0,"swing",function() {
       $(".jumbotron").attr("style", "background-image: url('" + projectModel.srcset.split(" ")[2] + "')");
       renderOverlay(projectModel);
       // .load() will make sure the jQ object is ready on the DOM before proceeding with the anon CB passed to it, in this case, fadeTo, ensuring our image is ready before we attempt to fade it back in.
       $(".jumbotron").load(function(){
-        $(".jumbotron").fadeTo(900,1,"swing");
+        $(".jumbotron").fadeTo(FADE_IN,1,"swing");
       });
       jumbotron = projectModel.project;
     });
-  }
+  };
   function rotateJumbotron(mod,collection) {
     var currentItem = collection.indexOf(mod);
     var numItems = collection.length;
@@ -161,11 +168,8 @@
         currentItem++;
       }
       updateSpotlight(collection[currentItem]);
-    }, interval);
-
-  }
-  setSpotlightTriggers();
-  setMenuSpotlightTriggers();
+    }, ROT_INTERVAL);
+  };
   rotateJumbotron(data[1],model);
   $("#programming").click();
 })(jQuery);
