@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 (function($) {
   var images = [];
@@ -12,12 +12,12 @@
   };
   function getImages(coll) {
   numImg = coll.length;
-    for (var i = 0: i < numImg; i++) {
+    for (var i = 0; i < numImg; i++) {
       imgList.push(coll[i].srcset.split(" ")[2]);
     }
-    return imgList
+    return imgList;
   };
   preload(getImages(collection));
   console.log("loader.js loaded");
 
-})(jQuery)
+})(jQuery);
