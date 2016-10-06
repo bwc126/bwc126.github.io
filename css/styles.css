@@ -168,7 +168,7 @@ header p {
 
 h1 {
 
-  font-size: 423%;
+  font-size: 360%;
   font-weight: 300;
   background-color: inherit;
 
@@ -177,7 +177,7 @@ h1 {
 h2 {
 
   font-weight: 300;
-  font-size: 111%;
+  font-size: 81%;
   margin: 0 0 0 0;
   background-color: inherit;
 
@@ -189,7 +189,7 @@ h2 {
   border: 12px solid rgba(20,23,26,0.9);
   padding: 0;
   max-height: 128px;
-  top: 12px;
+  top: 30px;
   position: relative;
   opacity: 0.9;
   left: 3%;
@@ -220,6 +220,15 @@ h2 {
 
   font-size: 120%;
   margin: 3% 0;
+  transition: 1s;
+
+}
+
+.menu li:hover {
+
+  color: #1395FF;
+  text-shadow: 1px 1px 12px #1395FF;
+  transition: 1s;
 
 }
 
@@ -229,6 +238,20 @@ h2 {
 
 }
 
+.social-buttons {
+
+  margin: 3% 0 0 7.2%;
+
+}
+
+.social-buttons a {
+
+  margin: 0 1.2%;
+
+}
+
+/*section: showcase*/
+
 .btn-narrow {
 
   padding: 0;
@@ -237,8 +260,6 @@ h2 {
   right: -27%;
 
 }
-
-/*section: showcase*/
 
 .showcase .divider hr {
 

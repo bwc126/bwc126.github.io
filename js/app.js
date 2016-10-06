@@ -1,6 +1,8 @@
 "use strict";
+var collection;
 (function($) {
-  var rotation,
+  var jumbotron,
+      rotation,
       proj,
       sub;
   var pathPrefix = "images/thumbs/";
@@ -10,44 +12,70 @@
 
   var data = prog;
   var areas = [prog,engi,sci];
-  var model = [];
-  var jumbotron = data[1].project;
-  function compileModel() {
+  collection = [];
+
+  // @function buildcollection() collects all the models for the projects and stores them in a single collection, along with info about which subject area they belong to.
+  function buildCollection() {
     for (var subj = 0; subj<3; subj++) {
       for (var pro = 0; pro<3; pro++) {
         proj = areas[subj][pro];
         proj.subject = subj;
-        model.push(proj);
+        collection.push(proj);
       };
     };
   };
-  compileModel();
-  renderOverlay(data[1]);
+  buildCollection();
+
   // The click triggers for the subject buttons will set the project images to the project images for the appropriate subject area, and then call setSpotlightTriggers to make sure they will change the spotlight upon mouseenter.
-  $("#programming").click(function() {
-    // console.log("Programming active");
-    data = prog;
-    renderProjects();
+  function initButtons() {
+    $("#programming").click(function() {
+      console.log("Programming active");
+      data = prog;
+      renderProjects();
 
-  });
-  $("#engineering").click(function() {
-    // console.log("Engineering Active");
-    data = engi;
-    renderProjects();
+    });
+    $("#engineering").click(function() {
+      console.log("Engineering Active");
+      data = engi;
+      renderProjects();
 
-  });
-  $("#science").click(function() {
-    // console.log("Science Active");
-    data = sci;
-    renderProjects();
+    });
+    $("#science").click(function() {
+      console.log("Science Active");
+      data = sci;
+      renderProjects();
 
-  });
-  // rederOverlay handles rendering of the overlay and the title for the jumbotron
+    });
+
+  };
+
+  // @function init(project) takes an initial project to be the focus of the page upon loading and performs various once-a-session tasks, like setting the jumbotron variable so we know which project is active in it, rendering the overlay, initiating jumbotron rotation, and activating the subject area associated with the initial project.
+  function init(project) {
+    initButtons();
+    jumbotron = project.project;
+    renderOverlay(project);
+    rotateJumbotron(project,collection);
+    sub = project.subject;
+    console.log(sub);
+    if (sub === 0) {
+      $("#programming").click();
+    }
+    if (sub === 1) {
+      $("#engineering").click();
+    }
+    if (sub === 2) {
+      $("#science").click();
+    };
+  };
+
+  // renderOverlay handles rendering of the overlay and the title for the jumbotron
   function renderOverlay(project) {
     $(".title-bar").text(project.project);
 
     $(".overlay p").text(project.desc);
-  }
+  };
+
+  // @function renderProjects() handles the various tasks of rendering all the projects that need to be shown on the page for the presently-active subject area. This should be called anytime a subject area is activated.
   function renderProjects() {
     renderProjectText();
     renderProjectLinks();
@@ -58,6 +86,7 @@
     renderProjectModals();
     renderProjectModalImages();
   };
+
   // renderProjectText prepares the textual content of each project; this function is called when a button is pressed and a new subject area of content needs to be loaded.
   function renderProjectText() {
     $(".project h4").each(function(index) {
@@ -70,7 +99,7 @@
       $(this).attr("href", data[index].link);
     });
     $(".menu li").each(function(index) {
-      $(this).text(model[index].project);
+      $(this).text(collection[index].project);
     });
   };
   function renderProjectLinkDomains() {
@@ -121,8 +150,8 @@
   function setMenuSpotlightTriggers() {
     $(".menu li").each(function(index) {
       $(this).click(function() {
-        if (model[index].project !== jumbotron) {
-          sub = model[index].subject;
+        if (collection[index].project !== jumbotron) {
+          sub = collection[index].subject;
           if (sub === 0) {
             $("#programming").click();
           }
@@ -132,7 +161,7 @@
           else {
             $("#science").click();
           };
-          focusSpotlight(model[index]);
+          focusSpotlight(collection[index]);
           }
       });
     });
@@ -141,9 +170,9 @@
   function focusSpotlight(projectModel) {
     window.clearInterval(rotation);
     updateSpotlight(projectModel);
-    window.setTimeout(rotateJumbotron(projectModel,model),ROT_INTERVAL);
+    window.setTimeout(rotateJumbotron(projectModel,collection),ROT_INTERVAL);
   };
-  // updateSpotlight takes a project model and sets the spotlight jumbotron to change to its image, fading in and out with an animation. The function also updates the tracker variable for which project is currently on the jumbotron.
+  // @function updateSpotlight takes a project model and sets the spotlight jumbotron to change to its image, fading in and out with an animation. The function also updates the tracker variable for which project is currently on the jumbotron.
   function updateSpotlight(projectModel) {
     // Callbacks to jQ animation functions will execute after the ani completes, so this will cause the jumbotron image to fadeOut, and then execute the code passed into the anon calllback.
     $(".jumbotron").fadeTo(FADE_OUT,0,"swing",function() {
@@ -156,6 +185,7 @@
       jumbotron = projectModel.project;
     });
   };
+  // @function rotateJumbotron sets up a rotation inteval for the jumbotron image, taking an initial image and rotating it according to a constant across each of the project images found in collection.
   function rotateJumbotron(mod,collection) {
     var currentItem = collection.indexOf(mod);
     var numItems = collection.length;
@@ -170,6 +200,6 @@
       updateSpotlight(collection[currentItem]);
     }, ROT_INTERVAL);
   };
-  rotateJumbotron(data[1],model);
-  $("#programming").click();
+
+  init(collection[1]);
 })(jQuery);
