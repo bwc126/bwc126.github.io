@@ -14,6 +14,7 @@
   numImg = coll.length;
     for (var i = 0; i < numImg; i++) {
       imgList.push(coll[i].srcset.split(" ")[2]);
+      imgList.push(coll[i].thumb);
     }
     return imgList;
   };
