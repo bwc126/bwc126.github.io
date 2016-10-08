@@ -76,17 +76,17 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Populate content areas.
 
-- Optimize image/file loading, perhaps using a preloader service.
+- ~~Optimize image/file loading,~~ ~~perhaps using a preloader service~~.
 
-- Make optimal use of images for responsive design.
+- ~~Make optimal use of images for responsive design.~~
 
 - Minimize number of CSS rules and classes.
 
-- Change URL to something simple.
+- Change URL to something simple, perhaps host on s3 instead.
 
 - Use something besides hr tags to visually differentiate menu items.
 
-- Use parallax.(?)
+- Use parallax.
 
 - Use accordion menu for each project, eliminate modals and jumbotron, replace with a carousel at the top or within each project for multiple images. Alternately, an accordion menu entry with each subject area, and the carousel within each accordion changes for viewing each project within the subject area, changing the text along with the image.
 
