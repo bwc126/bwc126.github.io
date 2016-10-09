@@ -49,6 +49,14 @@
 
 }
 
+.txt-glo-bl-resp:hover {
+
+  color: #1395FF;
+  text-shadow: 0px 0px 9px #1395FF;
+  transition: 1s ease-out;
+
+}
+
 .text-glow-pink {
 
   color: #FF1395;
