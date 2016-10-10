@@ -134,7 +134,7 @@ var collection;
       $(this).attr('alt', msg);
     });
   };
-
+  // @function setSpotlightTriggers attaches triggers to each project shown on the page (of the three available spots) so that the mouse entering their div will cause the corresponding project to become the focus of the spotlight jumbotron.
   function setSpotlightTriggers() {
     $(".project div").each(function(index) {
       // Any time a project image is entered, the spotlight img will fadeout, set new src/srcset according to the project that was entered, and then fade back in.
@@ -147,6 +147,7 @@ var collection;
       });
     });
   };
+  // @function setMenuSpotlightTriggers serves a similar functino to setSpotlightTriggers, attaching a trigger to each project in the menu such that clicking on a project in the menu will cause the spotlight to shift to the corresponding project, and the project's subject area will become the active one, ultimately chaning the three projects shown on the page. 
   function setMenuSpotlightTriggers() {
     $(".menu li").each(function(index) {
       $(this).click(function() {
