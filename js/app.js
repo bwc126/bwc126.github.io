@@ -48,7 +48,18 @@ var collection;
     });
 
   };
-
+  // @function pressButton(button) takes the number corresponding to a subject area and activates the corresponding subject area by using jQuery to trigger the button.
+  function pressButton(button) {
+    if (button === 0) {
+      $("#programming").click();
+    }
+    if (button === 1) {
+      $("#engineering").click();
+    }
+    if (button === 2) {
+      $("#science").click();
+    };
+  };
   // @function init(project) takes an initial project to be the focus of the page upon loading and performs various once-a-session tasks, like setting the jumbotron variable so we know which project is active in it, rendering the overlay, initiating jumbotron rotation, and activating the subject area associated with the initial project.
   function init(project) {
     initButtons();
@@ -57,15 +68,7 @@ var collection;
     rotateJumbotron(project,collection);
     sub = project.subject;
     console.log(sub);
-    if (sub === 0) {
-      $("#programming").click();
-    }
-    if (sub === 1) {
-      $("#engineering").click();
-    }
-    if (sub === 2) {
-      $("#science").click();
-    };
+    pressButton(sub);
   };
 
   // renderOverlay handles rendering of the overlay and the title for the jumbotron
@@ -147,21 +150,13 @@ var collection;
       });
     });
   };
-  // @function setMenuSpotlightTriggers serves a similar functino to setSpotlightTriggers, attaching a trigger to each project in the menu such that clicking on a project in the menu will cause the spotlight to shift to the corresponding project, and the project's subject area will become the active one, ultimately chaning the three projects shown on the page. 
+  // @function setMenuSpotlightTriggers serves a similar functino to setSpotlightTriggers, attaching a trigger to each project in the menu such that clicking on a project in the menu will cause the spotlight to shift to the corresponding project, and the project's subject area will become the active one, ultimately chaning the three projects shown on the page.
   function setMenuSpotlightTriggers() {
     $(".menu li").each(function(index) {
       $(this).click(function() {
         if (collection[index].project !== jumbotron) {
           sub = collection[index].subject;
-          if (sub === 0) {
-            $("#programming").click();
-          }
-          if (sub === 1) {
-            $("#engineering").click();
-          }
-          else {
-            $("#science").click();
-          };
+          pressButton(sub);
           focusSpotlight(collection[index]);
           }
       });
