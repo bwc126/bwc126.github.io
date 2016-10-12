@@ -70,15 +70,11 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to)
 
-- ~~Add contact me buttons: linkedIn, Gmail, G+, Github, Udacity, etc.~~
+- Use media query to responsively change title banner overlay extension amount.
 
 - Add resumes to the 'about me' modal, replace google plus with a resume.
 
 - Populate content areas.
-
-- ~~Optimize image/file loading,~~ ~~perhaps using a preloader service~~.
-
-- ~~Make optimal use of images for responsive design.~~
 
 - Minimize number of CSS rules and classes.
 
