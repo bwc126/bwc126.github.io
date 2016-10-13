@@ -338,6 +338,7 @@ button:hover {
 
 }
 
+
 .jumbotron:hover .title-banner {
 
   height: 36%;
@@ -488,5 +489,23 @@ button:hover {
 p {
 
   margin: 1% 0 0 0;
+
+}
+
+/* IMPORTANT: Media Queries must follow regular CSS */
+
+@media (max-width: 600px) {
+
+  .title-banner {
+
+    height: 18%;
+
+  }
+
+  .jumbotron:hover .title-banner {
+
+    height: 60%;
+
+  }
 
 }
