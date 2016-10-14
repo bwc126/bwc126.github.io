@@ -224,7 +224,7 @@ h2 {
 
 }
 
-.menu li {
+.menu td {
 
   font-size: 120%;
   margin: 3% 0;
@@ -232,17 +232,11 @@ h2 {
 
 }
 
-.menu li:hover {
+.menu td:hover {
 
   color: #1395FF;
   text-shadow: 1px 1px 12px #1395FF;
   transition: 1s;
-
-}
-
-.menu hr {
-
-  margin: 0;
 
 }
 
