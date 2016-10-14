@@ -152,7 +152,7 @@ var collection;
   };
   // @function setMenuSpotlightTriggers serves a similar functino to setSpotlightTriggers, attaching a trigger to each project in the menu such that clicking on a project in the menu will cause the spotlight to shift to the corresponding project, and the project's subject area will become the active one, ultimately chaning the three projects shown on the page.
   function setMenuSpotlightTriggers() {
-    $(".menu li").each(function(index) {
+    $(".menu td").each(function(index) {
       $(this).click(function() {
         if (collection[index].project !== jumbotron) {
           sub = collection[index].subject;
