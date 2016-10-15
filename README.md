@@ -70,7 +70,7 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to)
 
-- Use media query to responsively change title banner overlay extension amount.
+- ~~Use media query to responsively change title banner overlay extension amount.~~
 
 - Add resumes to the 'about me' modal, replace google plus with a resume.
 
@@ -84,6 +84,6 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Use parallax.
 
-- Use accordion menu for each project, eliminate modals and jumbotron, replace with a carousel at the top or within each project for multiple images. Alternately, an accordion menu entry with each subject area, and the carousel within each accordion changes for viewing each project within the subject area, changing the text along with the image.
+- Eliminate modals and jumbotron, replace with an accordion menu entry within each subject area, and the carousel within each accordion changes for viewing each project within the subject area, changing the text along with the image. Modals might be relocated to clicking "more" in this text area. 
 
 - Refactor 'app' into views, models, controllers.
