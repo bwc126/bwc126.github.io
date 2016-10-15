@@ -80,10 +80,10 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Change URL to something simple, perhaps host on s3 instead.
 
-- Use something besides hr tags to visually differentiate menu items.
+- ~~Use something besides hr tags to visually differentiate menu items.~~
 
 - Use parallax.
 
-- Eliminate modals and jumbotron, replace with an accordion menu entry within each subject area, and the carousel within each accordion changes for viewing each project within the subject area, changing the text along with the image. Modals might be relocated to clicking "more" in this text area. 
+- Eliminate modals and jumbotron, replace with an accordion menu entry within each subject area, and the carousel within each accordion changes for viewing each project within the subject area, changing the text along with the image. Modals might be relocated to clicking "more" in this text area.
 
 - Refactor 'app' into views, models, controllers.
