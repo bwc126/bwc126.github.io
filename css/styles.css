@@ -217,17 +217,24 @@ h2 {
   font-size: 210%
   position: absolute;
   z-index: 1000;
-  width: 636%;
-  left: -519%;
+  width: 300%;
+  left: -183%;
   top: 96%;
   padding: 12%;
 
 }
 
+.menu table {
+
+  width: 90%;
+
+}
+
 .menu td {
 
-  font-size: 120%;
-  margin: 3% 0;
+  font-size: 180%;
+  margin: 33% 0;
+  padding: 0 6%;
   transition: 1s;
 
 }
@@ -489,6 +496,19 @@ p {
 /* IMPORTANT: Media Queries must follow regular CSS */
 
 @media (max-width: 600px) {
+
+  .menu {
+
+    width: 510%;
+    left: -360%;
+
+  }
+
+  .menu table {
+
+    width: 90%;
+
+  }
 
   .title-banner {
 
