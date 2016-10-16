@@ -82,8 +82,4 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 - Change URL to something simple, perhaps host on s3 instead.
 
-- ~~Use something besides hr tags to visually differentiate menu items.~~
-
-- ~~Use media query to responsively change title banner overlay extension amount.~~
-
 - Refactor 'app' into views, models, controllers.
