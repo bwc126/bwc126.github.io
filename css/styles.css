@@ -494,13 +494,30 @@ p {
 }
 
 /* IMPORTANT: Media Queries must follow regular CSS */
-
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
 
   .menu {
 
-    width: 510%;
-    left: -360%;
+    width: 420%;
+    left: -300%;
+
+  }
+
+  .menu table {
+
+    width: 90%;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .menu {
+
+    width: 600%;
+    left: -420%;
 
   }
 
