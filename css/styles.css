@@ -226,7 +226,7 @@ h2 {
 
 .menu table {
 
-  width: 90%;
+  width: 100%;
 
 }
 
@@ -241,6 +241,7 @@ h2 {
 
 .menu td:hover {
 
+  cursor: pointer;
   color: #1395FF;
   text-shadow: 1px 1px 12px #1395FF;
   transition: 1s;
@@ -503,12 +504,6 @@ p {
 
   }
 
-  .menu table {
-
-    width: 90%;
-
-  }
-
 }
 
 
@@ -518,12 +513,6 @@ p {
 
     width: 600%;
     left: -420%;
-
-  }
-
-  .menu table {
-
-    width: 90%;
 
   }
 

@@ -68,7 +68,7 @@ Programming, Engineering and Science. Key projects/points of interest from each 
 
 # ToDo:
 
-- Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to)
+- Links to running projects or interactive overviews. (Use a gh-pages branch on each repo with a project to be linked-to).
 
 - Eliminate modals and jumbotron, replace with an accordion menu entry within each subject area, and the carousel within each accordion changes for viewing each project within the subject area, changing the text along with the image. Modals might be relocated to clicking "more" in this text area. (obviates need for menu headings, as it eliminates menu altogether).
 
