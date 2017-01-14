@@ -2,7 +2,7 @@
 var prog = {
   0: {
     project: "Nutrition Tracker",
-    link: "https://github.com/bwc126/nutrition-tracker",
+    link: "bwc126.github.io/nutrition-tracker",
     src: "images/S/nutrition-tracker-S.png",
     srcset: "images/M/nutrition-tracker-M.png 800w, images/L/nutrition-tracker-L.png 1200w",
     desc: "A calorie tracker with built-in search (via Nutritionix), implemented in Backbone.js. Features include use of Google Charts to visualize trends in calorie consumption, and a calendar date picker. This project improved my familiarity with the MVC paradigm, using API's, and pre-made code.",
