@@ -40,20 +40,20 @@ var engi = {
   },
   1: {
     project: "Microfluidic Reactionware",
-    link: "www",
+    link: "https://github.com/bwc126/Autofab-concepts",
     src: "images/S/reactionware-S.png",
     project: "Microfluidic Reactionware",
     srcset: "images/M/reactionware-M.png 800w, images/L/reactionware-L.png 1200w",
-    desc: "Model and prototype an Open Source microfluidic chip for general organic chemistry use, demonstrating simplicity and modularity as part of a larger additive manufacturing project.",
+    desc: "(WIP) Model and prototype an Open Source microfluidic chip for general organic chemistry use, demonstrating simplicity and modularity as part of a larger additive manufacturing project.",
     domain: "GITHUB",
     thumb: "reactionware-thumb.png"
   },
   2: {
     project: "Multimaterial Electrojetting",
-    link: "www",
+    link: "https://github.com/bwc126/Autofab-concepts",
     src: "images/S/emitter-S.png",
     srcset: "images/M/emitter-M.png 800w, images/L/emitter-L.png 1200w",
-    desc: "Model and prototype micronozzles capable of precise, high-throughput printing with a wide range of working material viscosities, disperity, and compositions.",
+    desc: "(WIP) Model and prototype micronozzles capable of precise, high-throughput printing with a wide range of working material viscosities, disperity, and compositions.",
     domain: "GITHUB",
     thumb: "emitter-thumb.png"
   }
@@ -61,28 +61,28 @@ var engi = {
 var sci = {
   0: {
     project: "Micro Photography",
-    link: "www",
-    src: "",
-    srcset: "",
+    link: "https://www.youtube.com/channel/UCWjL8p-j8VkGaNHCUP0DqVg",
+    src: "images/S/microphoto-S.png",
+    srcset: "images/M/microphoto-M.png 800w, images/L/microphoto-L.png 1200w",
     desc: "Assess microbiological diversity in local waterways, illustrating ecological complexity of suburban ecosystems.",
     domain: "YOUTUBE",
-    thumb: "something.png"
+    thumb: "microphoto-thumb.png"
   },
   1: {
-    project: "Characterizing Microparticles",
-    link: "www",
-    src: "",
-    srcset: "",
-    desc: "Characterize microparticles produced by a low-cost microfluidic technique for multilayer encapsulation. An Open Source laser-based Brownian motion detector was used to measure disperisty and demonstrate synthesis technique precision and repeatability.",
-    domain: "Github",
-    thumb: "something.png"
+    // project: "Characterizing Microparticles",
+    // link: "https://github.com/bwc126/Autofab-concepts",
+    // src: "",
+    // srcset: "",
+    // desc: "Characterize microparticles produced by a low-cost microfluidic technique for multilayer encapsulation. An Open Source laser-based Brownian motion detector was used to measure disperisty and demonstrate synthesis technique precision and repeatability.",
+    // domain: "Github",
+    // thumb: "something.png"
   },
   2: {
     project: "Chemical Spectrography",
-    link: "www",
+    link: "https://github.com/bwc126/Autofab-concepts",
     src: "",
     srcset: "",
-    desc: "Use a low-cost, open-source spectrographic system to characterize products and intermediates from reactions carried out in microfluidic reactionware.",
+    desc: "(WIP) Use a low-cost, open-source spectrographic system to characterize products and intermediates from reactions carried out in microfluidic reactionware.",
     domain: "Github",
     thumb: "something.png"
   }
