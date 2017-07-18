@@ -6,7 +6,7 @@ var prog = {
     src: "images/S/nutrition-tracker-S.png",
     srcset: "images/M/nutrition-tracker-M.png 800w, images/L/nutrition-tracker-L.png 1200w",
     desc: "A calorie tracker with built-in search (via Nutritionix), implemented in Backbone.js. Features include use of Google Charts to visualize trends in calorie consumption, and a calendar date picker. This project improved my familiarity with the MVC paradigm, using API's, and pre-made code.",
-    domain: "GITHUB",
+    domain: "github",
     thumb: "nutrition-tracker-thumb.png"
   },
   1: {
@@ -15,7 +15,7 @@ var prog = {
     src: "images/S/map-S.png",
     srcset: "images/M/map-M.png 800w, images/L/map-L.png 1200w",
     desc: "Single page implementing Google Maps and Wikipedia API, with interactive points of interest. First use of a MVVM framework to produce a single-page application: Knockout.",
-    domain: "GITHUB",
+    domain: "github",
     thumb: "map-thumb.png"
   },
   2: {
@@ -24,7 +24,7 @@ var prog = {
     src: "images/S/arcade-game-S.png",
     srcset: "images/M/arcade-game-M.png 800w, images/M/arcade-game-M.png 1200w",
     desc: "A frogger clone made using HTML5 Canvas, engine provided by Udacity, but game classes and functions developed by me. An excellent learning opportunity for the programming concepts of separation of concerns, Object-Oriented Programming, and continuous looping constructs.",
-    domain: "GITHUB",
+    domain: "github",
     thumb: "arcade-game-thumb.png"
   }
 };
@@ -45,7 +45,7 @@ var engi = {
     project: "Microfluidic Reactionware",
     srcset: "images/M/reactionware-M.png 800w, images/L/reactionware-L.png 1200w",
     desc: "(WIP) Model and prototype an Open Source microfluidic chip for general organic chemistry use, demonstrating simplicity and modularity as part of a larger additive manufacturing project.",
-    domain: "GITHUB",
+    domain: "github",
     thumb: "reactionware-thumb.png"
   },
   2: {
@@ -54,7 +54,7 @@ var engi = {
     src: "images/S/emitter-S.png",
     srcset: "images/M/emitter-M.png 800w, images/L/emitter-L.png 1200w",
     desc: "(WIP) Model and prototype micronozzles capable of precise, high-throughput printing with a wide range of working material viscosities, disperity, and compositions.",
-    domain: "GITHUB",
+    domain: "github",
     thumb: "emitter-thumb.png"
   }
 };
@@ -65,25 +65,25 @@ var sci = {
     src: "images/S/microphoto-S.png",
     srcset: "images/M/microphoto-M.png 800w, images/L/microphoto-L.png 1200w",
     desc: "Assess microbiological diversity in local waterways, illustrating ecological complexity of suburban ecosystems.",
-    domain: "YOUTUBE",
+    domain: "youtube",
     thumb: "microphoto-thumb.png"
   },
   1: {
-    // project: "Characterizing Microparticles",
-    // link: "https://github.com/bwc126/Autofab-concepts",
-    // src: "",
-    // srcset: "",
-    // desc: "Characterize microparticles produced by a low-cost microfluidic technique for multilayer encapsulation. An Open Source laser-based Brownian motion detector was used to measure disperisty and demonstrate synthesis technique precision and repeatability.",
-    // domain: "Github",
-    // thumb: "something.png"
+    project: "Characterizing Microparticles",
+    link: "https://github.com/bwc126/Autofab-concepts",
+    src: "",
+    srcset: "",
+    desc: "Characterize microparticles produced by a low-cost microfluidic technique for multilayer encapsulation. An Open Source laser-based Brownian motion detector was used to measure disperisty and demonstrate synthesis technique precision and repeatability.",
+    domain: "github",
+    thumb: "something.png"
   },
   2: {
     project: "Chemical Spectrography",
     link: "https://github.com/bwc126/Autofab-concepts",
-    src: "",
-    srcset: "",
+    src: "images/S/spectro-S.png",
+    srcset: "images/M/spectro-M.png 800w, images/L/spectro-L.png 1200w",
     desc: "(WIP) Use a low-cost, open-source spectrographic system to characterize products and intermediates from reactions carried out in microfluidic reactionware.",
-    domain: "Github",
-    thumb: "something.png"
+    domain: "github",
+    thumb: "spectro-thumb.png"
   }
 };
