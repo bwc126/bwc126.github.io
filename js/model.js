@@ -71,9 +71,9 @@ var sci = {
   1: {
     project: "Characterizing Microparticles",
     link: "https://github.com/bwc126/Autofab-concepts",
-    src: "Brownian_motion_large.gif",
+    src: "images/L/Brownian_motion_large.gif",
     srcset: "",
-    desc: "Characterize microparticles produced by a low-cost microfluidic technique for multilayer encapsulation. An Open Source laser-based Brownian motion detector was used to measure disperisty and demonstrate synthesis technique precision and repeatability.",
+    desc: "(WIP) Characterize microparticles produced by a low-cost microfluidic technique for multilayer encapsulation. An Open Source laser-based Brownian motion detector will be used to measure disperisty and demonstrate synthesis technique precision and repeatability.",
     domain: "github",
     thumb: "Brownian_motion_large.gif"
   },
