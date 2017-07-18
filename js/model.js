@@ -69,6 +69,7 @@ var sci = {
     thumb: "microphoto-thumb.png"
   },
   1: {
+    // TODO: Add static images of microparticles for jumbotron.
     project: "Characterizing Microparticles",
     link: "https://github.com/bwc126/Autofab-concepts",
     src: "images/L/Brownian_motion_large.gif",
